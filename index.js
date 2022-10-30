@@ -52,7 +52,7 @@ const startFromFile = (filepath, tokens, date) => {
 
 const init = () => {
   const args = runCli()
-  const { tokens, date, filepath = `${process.cwd()}/src/data/transactions.csv` } = queryParse(args)
+  const { tokens, date = new Date(), filepath = `${process.cwd()}/src/data/transactions.csv` } = queryParse(args)
 
   // case init app
   if (args.length === 1 && args.includes('init')) {
@@ -75,7 +75,7 @@ const init = () => {
         logger(`Init data completed, path: ${filepath}`)
       })
       .catch((error) => logger(`Init data error, stacktrace: ${error}`, LOG_LEVEL.ERROR))
-  } else if (args.includes('--no-cache')) {
+  } else if (args.includes('option=no-cache')) {
     startFromFile(filepath, tokens, date)
   } else {
     console.info('[APP]: Getting porfolio...')
@@ -89,7 +89,8 @@ const init = () => {
           getDataFromCache(cacheFilePath, date)
             .then((foundBalance) => {
               const filteredKeys = tokens.length ? filterKeyValObject(tokens, foundBalance) : foundBalance
-              print(filteredKeys, joinTokens(tokens))
+              const targetToken = tokens.length ? tokens : Object.keys(filteredKeys)
+              print(filteredKeys, joinTokens(targetToken))
             })
         } else {
           console.info('[APP]: Cache not found...')
