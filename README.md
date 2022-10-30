@@ -18,6 +18,8 @@ If not you can download it here [https://nodejs.org/en/]
 
 6. run `npm install`
 
+7. create an `.env` file and copy paste the content from `env.local`
+
 ### Commands
 
 Start caching and populate data:
