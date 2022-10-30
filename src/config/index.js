@@ -19,4 +19,4 @@ export const CACHE_DAYS = process.env.CACHE_DAYS
 export const LOCATION_DIR_LOG = `${process.cwd()}/src${process.env.LOCATION_DIR_LOG}`
 
 // file
-export const MAX_FILE_SIZE = process.env.MAX_FILE_SIZE
+export const MAX_FILE_SIZE = parseInt(process.env.MAX_FILE_SIZE)
