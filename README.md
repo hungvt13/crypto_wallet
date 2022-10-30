@@ -53,7 +53,7 @@ Get portfolio of given time and with target token group
 Get portfolio by read full file even if there's cached data
 
 ```
-npm run-script run token=BTC,ETH date=10/23/2019 --no-cache
+npm run-script run token=BTC,ETH date=10/23/2019 option=no-cache
 ```
 
 ### Assumptions
