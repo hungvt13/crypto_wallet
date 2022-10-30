@@ -27,7 +27,7 @@ const start = (path, tokens, date) => {
     start: 1
   })
     .then(() => {
-      print(getRawPorfolio(), joinTokens(tokens))
+      print(getRawPorfolio(), joinTokens(Object.keys(getRawPorfolio())))
     })
     .catch((error) => logger(`Build data error, stacktrace: ${error}`, LOG_LEVEL.ERROR))
 }
