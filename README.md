@@ -14,6 +14,10 @@ If not you can download it here [https://nodejs.org/en/]
 
 4. Put the csv file into `./src/data` , make sure the file is in correct place
 
+In case there no data folder
+
+Please process to create these following 3 folders in the `./src` : data, logs, cache
+
 5. Using the CLI tool, move to the folder directory
 
 6. run `npm install`
