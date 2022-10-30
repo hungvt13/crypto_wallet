@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# logs
+logs/*
+
+# cache
+cache/*
+
+# data
+data/*
+.env

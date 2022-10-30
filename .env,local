@@ -1,0 +1,15 @@
+# .env file
+
+# API keys
+API_KEY=379660cba0ff5939101eac0dcd94e97eb40187f89d59bb0c5a8ff9f39c5c7a4e # should not put API key here but since it's a test so I just put it convinient
+
+# API base urls
+API_URL=https://min-api.cryptocompare.com
+
+# configs
+DATE_FORMAT=MM/DD/YYYY
+DATE_LOCALE=us
+TYPE_CURRENCY=USD
+CACHE_DAYS=1
+LOCATION_DIR_LOG=/logs
+MAX_FILE_SIZE=2  # GBs
