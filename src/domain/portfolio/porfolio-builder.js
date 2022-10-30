@@ -63,7 +63,7 @@ export const buildPorfolio = async (rawPorfolio, tokens) => {
   return tokenKeys.reduce((acc, key) => {
     acc[key] = {
       total: rawPorfolio[key],
-      amount: results[key][TYPE_CURRENCY] * rawPorfolio[key]
+      [TYPE_CURRENCY]: results[key][TYPE_CURRENCY] * rawPorfolio[key]
     }
 
     return acc
