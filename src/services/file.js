@@ -64,5 +64,5 @@ export const existFile = async (filename) => {
 }
 
 export const getFileSizeInGB = (filename) => {
-  return fs.statSync(filename).size * (1024 * 1024 * 1024)
+  return fs.statSync(filename).size / (1024 * 1024 * 1024)
 }
